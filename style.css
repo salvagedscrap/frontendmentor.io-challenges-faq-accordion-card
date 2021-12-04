@@ -1,0 +1,241 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw ;
+}
+.header-1{
+    font-size: 6rem;
+   padding: 4rem 0;
+    color: hsl(237, 12%, 33%);
+    flex: 0 0 40%;
+
+
+}
+p{
+    font-size: 1.2rem;
+    color: hsl(240, 6%, 50%);
+    padding: 4rem 2rem;
+}
+img{
+    width: 100%;
+    height: 100%;
+    
+}
+.container{
+   padding: 4rem 0;
+    display: flex;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    background-color: #fff;
+    border-radius: 2.5rem;
+    position: relative;
+    height: 80%;
+}
+.container::after{
+    content: url(./images/illustration-box-desktop.svg);
+    position: absolute;
+    left: -3%;
+    top: 64%;
+    z-index: 100;
+    transform: translate(-50%,-50%);
+    
+}
+.img-container{
+    width: 50%;
+    /* padding: 2rem; */
+    position: relative;
+    background-image:url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    padding: 0;
+    
+    
+
+}
+.il-woman-online-cont{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+.il-woman-online-cont::after{
+    content: url(./images/illustration-woman-online-desktop.svg);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 38%;
+    top: 55%;
+
+    
+}
+
+
+/* .il-box{
+    position: absolute;
+    transform: translate(-13rem,-40rem);
+
+} */
+.accordion-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem ;
+}
+
+.accordion{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    text-align: left;
+    color: hsl(237, 12%, 33%);
+    cursor: pointer;
+}
+.panel-header{
+    font-weight: 400;
+}
+.active .accordion{
+    font-weight: bold;
+    color:hsl(238, 29%, 16%);
+}
+.active .panel-header{
+    font-weight: 700;
+}
+
+.accordion:hover{
+    color: hsl(14, 88%, 65%);
+}
+
+
+
+.panel{
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 2rem;
+    background-color: #fff;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+    content: url(.//images/icon-arrow-down.svg); 
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    transform: rotate(180deg);
+  }
+
+  @media screen and (max-width:1000px) {
+      html{
+          font-size: 58%;
+      }
+      
+  }
+
+  
+  @media (min-width:400px) and (max-width:700px)  {
+    html{
+        font-size: 58%;
+    }
+    .container{
+        width: 80%;
+        display: grid;
+        grid-template-rows: 1fr 3fr;
+        /* height: 70vh; */
+    }
+    .img-container{
+        width: 100%;
+        height: 100%;
+    }
+    .accordion-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 2rem ;
+    }
+    .il-woman-online-cont{
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        position: relative;
+    }
+   
+    .il-woman-online-cont::after{
+        content: url(./images/illustration-woman-online-mobile.svg);
+        background-image: url(./images/bg-pattern-mobile.svg);
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: -200%;
+        width: 70%;
+        
+    
+        
+    }
+    .container::after{
+       display: none;
+        
+    }
+}
+@media (min-width:1px) and (max-width:400px){
+    html{
+        font-size: 52%;
+    }
+    .container{
+        width: 90%;
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+    }
+    .img-container{
+        width: 100%;
+        height: 100%;
+    }
+    .accordion-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 2rem ;
+    }
+    .il-woman-online-cont{
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        position: relative;
+    }
+   
+    .il-woman-online-cont::after{
+        content: url(./images/illustration-woman-online-mobile.svg);
+        background-image: url(./images/bg-pattern-mobile.svg);
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+    
+        
+    }
+    .container::after{
+       display: none;
+        
+    }
+}
